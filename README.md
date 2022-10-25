@@ -62,7 +62,7 @@ EOF  all  count  create  destroy  help  quit  show  update
 | AUTHOR | EMAIL | TWITTER | LINKEDIN |
 | :---: | :---: | :---: | :---: |
 | Kelechi Anyaegbu | kellyxglobal@gmail.com | [@](https://www.twitter.com/) | (https://www.linkedin.com/in//) |
-| Hayatudeen Abdulrahman | hayatudeenabdulrahman@gmail.com | [@hayats_builds](https://twitter.com/hayats_builds) | [](https://www.linkedin.com/in/hayatudeen-abdulrahman/) |
+| Hayatudeen Abdulrahman | hayatudeenabdulrahman@gmail.com | [@hayats_builds](https://twitter.com/hayats_builds) | [https://www.linkedin.com/in/hayatudeen-abdulrahman/](Haytudeen) |
 
 ## License
 No special licenses needed
