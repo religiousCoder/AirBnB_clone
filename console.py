@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 """This module defines the entry point of the command interpreter.
 
 It defines one class, `HBNBCommand()`, which sub-classes the `cmd.Cmd` class.
