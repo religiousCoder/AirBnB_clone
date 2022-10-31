@@ -49,8 +49,6 @@ class TestBase(unittest.TestCase):
         self.assertIn('created_at', b1_dict.keys())
         self.assertIn('updated_at', b1_dict.keys())
         self.assertEqual(b1_dict['__class__'], type(b1).__name__)
-        with self.assertRaises(KeyError) as e:
-            b2.to_dict()
 
     def test_save(self):
         """Test method for save"""
@@ -74,21 +72,7 @@ class TestBase(unittest.TestCase):
             f.seek(0)
             self.assertEqual(json.load(f), d)
 
-    def test_save_no_args(self):
-        """Tests save() with no arguments."""
-        self.resetStorage()
-        with self.assertRaises(TypeError) as e:
-            BaseModel.save()
-        msg = "save() missing 1 required positional argument: 'self'"
-        self.assertEqual(str(e.exception), msg)
 
-    def test_save_excess_args(self):
-        """Tests save() with too many arguments."""
-        self.resetStorage()
-        with self.assertRaises(TypeError) as e:
-            BaseModel.save(self, 98)
-        msg = "save() takes 1 positional argument but 2 were given"
-        self.assertEqual(str(e.exception), msg)
 
     def test_str(self):
         """Test method for str representation"""

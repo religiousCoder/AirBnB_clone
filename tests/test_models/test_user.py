@@ -7,7 +7,7 @@ from models.engine.file_storage import FileStorage
 from models.user import User
 from models import storage
 from datetime import datetime
-
+from time import sleep
 
 class TestState(unittest.TestCase):
     """Test cases for the `User` class."""
@@ -49,6 +49,7 @@ class TestState(unittest.TestCase):
         """Test method for save"""
         u1 = User()
         old_update = u1.updated_at
+        sleep(2)
         u1.save()
         self.assertNotEqual(u1.updated_at, old_update)
 
