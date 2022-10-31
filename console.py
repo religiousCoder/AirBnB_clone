@@ -18,8 +18,8 @@ Typical usage example:
 
     (hbnb) help
     Documented commands (type help <topic>):
-    ========================================
-    EOF  create  help  quit
+    ===========================================
+    EOF  create show destroy update help  quit
 
     (hbnb)
     (hbnb) quit
