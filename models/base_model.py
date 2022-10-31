@@ -1,62 +1,64 @@
 #!/usr/bin/python3
-"""
-Module: base.py
-"""
-import models
+""" Base class for all other classes in the module."""
+
 import uuid
 from datetime import datetime
+import models
 
 
 class BaseModel():
-    """
-    Base class which defines all common
-    attributes/methods for other classes
+    """ Defines all common attributes/methods for other classes.
+
+        Attributes:
+            id (str): A unique id generated upon instance creation.
+            created_at (:obj:`datetime`): Saves the current datetime
+                when an instance is created.
+            updated_at (:obj:`datetime`): Saves the current datetime
+                when an instance is created/updated.
     """
 
     def __init__(self, *args, **kwargs):
+        """ Initializes each instance of the class.
+
+            Args:
+                *args: Not used
+                **kwargs: A keyword arguments constructor of a BaseModel.
         """
-        instatiates an object with it's
-        attributes
-        """
-        if len(kwargs) > 0:
-            for key, value in kwargs.items():
-                if key == '__class__':
-                    continue
-                if key == "created_at" or key == "updated_at":
-                    value = datetime.fromisoformat(value)
-                setattr(self, key, value)
+        if len(kwargs):
+            for k, v in kwargs.items():
+                if k != '__class__':
+                    if k == 'created_at' or k == 'updated_at':
+                        v_to_datetime = datetime.fromisoformat(v)
+                        setattr(self, k, v_to_datetime)
+                    else:
+                        setattr(self, k, v)
             return
 
         self.id = str(uuid.uuid4())
         self.created_at = datetime.now()
         self.updated_at = datetime.now()
-
         models.storage.new(self)
 
     def __str__(self):
+        """ Returns the string representation of a `BaseModel` instance.
+
         """
-        Returns the string representation
-        of the instance
-        """
-        return "[{}] ({}) {}".format(
-            type(self).__name__, self.id, self.__dict__)
+        return (f'[{type(self).__name__}] ({self.id}) \
+{self.__dict__}')
 
     def save(self):
-        """
-        updates the public instance attribute
-        updated_at with the current datetime
+        """ Updates public instance attribute `updated_at`
+            with the current datetime and serializes objects
+            to a JSON file.
         """
         self.updated_at = datetime.now()
         models.storage.save()
 
     def to_dict(self):
+        """ Returns a dictionary containing all keys/values
+            of `__dict__` of the instance
         """
-        returns a dictionary containing all keys/values
-        of __dict__ of the instance
-        """
-        dict = {**self.__dict__}
-        dict['__class__'] = type(self).__name__
-        dict['created_at'] = dict['created_at'].isoformat()
-        dict['updated_at'] = dict['updated_at'].isoformat()
-
-        return dict
+        instance_dict = {k: v if type(v) not in [datetime]
+                         else v.isoformat() for k, v in self.__dict__.items()}
+        instance_dict['__class__'] = f'{type(self).__name__}'
+        return (instance_dict)
