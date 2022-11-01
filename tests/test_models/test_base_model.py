@@ -72,8 +72,6 @@ class TestBase(unittest.TestCase):
             f.seek(0)
             self.assertEqual(json.load(f), d)
 
-
-
     def test_str(self):
         """Test method for str representation"""
         b1 = BaseModel()

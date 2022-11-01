@@ -45,7 +45,7 @@ class FileStorage():
             otherwise does nothing.
         """
         objects_dict = {'BaseModel': BaseModel, 'User': User, 'State': State,
-        'City': City, 'Amenity': Amenity, 'Place': Place, 'Review': Review}
+                        'City': City, 'Amenity': Amenity, 'Place': Place, 'Review': Review}
 
         if not os.path.exists(FileStorage.__file_path):
             return

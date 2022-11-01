@@ -10,7 +10,6 @@ from datetime import datetime
 from time import sleep
 
 
-
 class TestState(unittest.TestCase):
     """Test cases for the `State` class."""
 

@@ -53,11 +53,11 @@ class HBNBCommand(cmd.Cmd):
         print()
         return True
 
-    def emptyline(self, arg):
-        """ Overides Cmd builtin emptyline method
-
-        """
-        pass
+    def emptyline(self):
+        """ Overides cmd builtin  emptyline method."""
+        if self.lastcmd:
+            self.lastcmd = ""
+            return self.onecmd('\n')
 
     def do_create(self, arg):
         'Creates a new instance of BaseModel Ex: `create BaseModel`'

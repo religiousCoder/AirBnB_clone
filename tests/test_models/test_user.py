@@ -9,6 +9,7 @@ from models import storage
 from datetime import datetime
 from time import sleep
 
+
 class TestState(unittest.TestCase):
     """Test cases for the `User` class."""
 
