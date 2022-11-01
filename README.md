@@ -42,7 +42,7 @@ mack@mack-pc:~/ALX/Python/AirBnB_clone$ ./console.py
 (hbnb) help
 
 Documented commands (type help <topic>):
-========================================
+==========================================================
 EOF  all  count  create  destroy  help  quit  show  update
 
 (hbnb) create User
@@ -52,16 +52,14 @@ EOF  all  count  create  destroy  help  quit  show  update
 
 ## File description
 
-| File                            | Description                                                        |
-| :------------------------------ | :----------------------------------------------------------------- |
-| `console.py`                    | Creates the command line intepreter                                |
-| `models/base_model.py`          | Contains a class defining attributes and methods for other classes |
-| `models/engine/file_storage.py` | Contains the class for JSON serialization and deserialization      |
-| `tests/test_console.py`         | Edge cases for the CLI                                             |
-| `tests/test_base_model.py`      | Edge cases for BaseModel()                                         |
-| `tests/test_file_storage.py`    | Edge cases for FileStorage()                                       |
-
-## Bugs
+| File | Description |
+| :--- | :--- |
+| `console.py` | Creates the command line intepreter |
+| `models/base_model.py` | Contains a class defining attributes and methods for other classes |
+| `models/engine/file_storage.py` | Contains the class for JSON serialization and deserialization |
+| `tests/test_console.py` | Edge cases for the CLI |
+| `tests/test_base_model.py` | Edge cases for BaseModel() |
+| `tests/test_file_storage.py` | Edge cases for FileStorage() |
 
 - No known bugs
 
