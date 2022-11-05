@@ -17,9 +17,3 @@ This is the second part of the AirBnB clone  project where the front-end part of
 ## Licence
 - No special licences
 
-## Authors
- - [Kelechi Anyaegbu - Github](/https://github.com/kellyxglobal)
- - [Linkedin](https://www.linkedin.com/in/kellyxglobalwebs/)
- - [Twitter](/https://twitter.com/kellyxglobal)
-
-
