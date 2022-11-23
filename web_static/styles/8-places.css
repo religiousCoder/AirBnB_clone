@@ -1,0 +1,120 @@
+.places h1, h2{
+    font-size: 30px;
+}
+
+.places {
+    text-align: left;
+    vertical-align: top;
+}
+.places h1 {
+    margin-bottom: 0;
+}
+
+.places article div.parent{
+    padding: 20px;
+    margin: 20px;
+    display: inline-block;
+    border: 1px solid #ff5a5f;
+    width: 390px;
+}
+
+.places article {
+text-align: center;
+}
+
+.places .parent {
+    position: relative;
+}
+
+.price_by_night{
+    color: #ff5a5f;
+    min-width: 60px;
+    height: 60px;
+    border:4px solid #ff5a5f;
+    border-radius: 50%;
+    font-size: 30px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.price_by_night span {
+    position: relative;    
+    top: 15px;
+}
+
+
+.parent .information {
+    height: 80px;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;    
+    position: relative;
+}
+
+.parent .information .max_guest {
+    width: 100px;
+    background-image: url('../images/icon_group.png');
+    background-repeat: no-repeat;
+    background-position:0 50%;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+.parent .information .max_guest p {
+    position: relative;
+    top: 27px;
+    right: 25px;
+    font-weight: bold;
+}
+
+.parent .information .number_rooms {
+    width: 100px;
+    background-image: url('../images/icon_bed.png');
+    background-repeat: no-repeat;
+    background-position:50% 50%;
+    position: absolute;
+    height: 50px;
+    top: 20px;
+    left: 130px;
+}
+
+.parent .information .number_rooms p {
+    position: relative;
+    top: 27px;
+    left: 5px;
+    font-weight: bold;
+}
+
+.parent .information .number_bathrooms {
+    width: 100px;
+    background-image: url('../images/icon_bath.png');
+    background-repeat: no-repeat;
+    background-position:50% 50%;
+    position: absolute;
+    height: 50px;
+    top: 15px;
+    left: 270px;
+}
+
+.parent .information .number_bathrooms p {
+    position: relative;
+    top: 33px;
+    left: 7px;
+    font-weight: bold;
+}
+
+p .owner, p .owner-name {
+    float: left;
+}
+
+.user p, .description p {
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 500;
+    font-size: 1.05em;
+    word-spacing: -2px;
+}
+
+p .owner {
+    font-weight: bold;
+}
